@@ -1,6 +1,6 @@
 import { AppPage } from './app.po';
 
-describe('masterform App', () => {
+describe('todon App', () => {
   let page: AppPage;
 
   beforeEach(() => {

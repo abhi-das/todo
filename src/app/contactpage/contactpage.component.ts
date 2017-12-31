@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { TaskServices } from '../services/app.task.services';
+
 @Component({
   selector: 'app-contactpage',
   templateUrl: './contactpage.component.html',
@@ -7,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContactpageComponent implements OnInit {
 
-  constructor() { }
+	taskList: Array<any>;
 
-  ngOnInit() {
-  }
+	constructor(private _taskSrv: TaskServices) { }
+
+	ngOnInit() {
+
+		this._taskSrv.getTasks()
+			.subscribe( res => this.taskList = res);
+
+	}
 
 }

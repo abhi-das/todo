@@ -12,10 +12,12 @@ import { ServicespageComponent } from './servicespage/servicespage.component';
 
 import { HttpClientModule } from '@angular/common/http';
 
+import { TaskServices } from './services/app.task.services';
+
 
 @NgModule({
   imports: [
-    BrowserModule.withServerTransition({appId: 'my-app'}),
+    BrowserModule,
     HttpModule,
     HttpClientModule,
     AppRoutingModule
@@ -26,7 +28,7 @@ import { HttpClientModule } from '@angular/common/http';
     HomepageComponent,
     ServicespageComponent
   ],
-  providers: [ AppDataService ],
+  providers: [ AppDataService,TaskServices ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

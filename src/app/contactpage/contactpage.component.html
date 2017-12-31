@@ -1,3 +1,9 @@
 <p>
   contactpage works!
 </p>
+
+<ul>
+	<li *ngFor="let task of taskList">
+		<p>{{task.title}} <strong>{{task.isDone}}</strong></p>
+	</li>
+</ul>
