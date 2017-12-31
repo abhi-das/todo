@@ -16,7 +16,7 @@ export class ContactpageComponent implements OnInit {
 	ngOnInit() {
 
 		this._taskSrv.getTasks()
-			.subscribe( res => this.taskList = res);
+			.subscribe( res => this.taskList = res.data);
 
 	}
 
