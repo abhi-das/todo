@@ -17,5 +17,10 @@ export class TaskServices {
 			.map(result => this.result = result.json());
 	}
 
+	getAuth() {
+		return this._http.get("/api/auth")
+			.map(result => this.result = result.json());
+	}
+
 
 }
